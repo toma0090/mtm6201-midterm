@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to external CSS file and Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+    
+    <title>Contact</title>
+</head>
+<body>
+ <!-- Header Section -->
+    <header>
+            <!-- Shopping Cart Icon -->
+        <i class='fas fa-shopping-cart'></i>
+        <!-- Logo Section - logo optimized -->
+        <div class="logo">
+            <picture>
+    <source media="(max-width:500px)" srcset="images/logo-180_x_180.png">
+    <source media="(min-width:501px)" srcset="images/logo-320_x_320.png">
+    <img src="images/logo-320_x_320.png" alt="logo">
+</picture>
+    
+        </div>
+         <!-- hamburgermenu Toggle Section -->
+ <div id="menuToggle">
+    <input type="checkbox"/>
+    <span></span>
+    <span></span>
+    <span></span>
+    <ul id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Products.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</div>
+    </header>
+
+
+<!-- Main Content Section -->
+    <div class="tables-container">
+         <!-- Contact Information Table -->
+    <table class="contact-table">
+        <tr>
+            <td>
+                <!-- Contact Form Section -->
+                <div class="contact-form">
+                    <h2>Contact Information</h2>
+                    <form class="contact-form">
+                        
+                        <label for="fname">First Name:</label>
+                        <input type="text" id="fname" name="fname" required>
+
+                        <label for="lname">Last Name:</label>
+                        <input type="text" id="lname" name="lname" required>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                       <!-- Google Maps Embed for Location -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.450853748194!2d-122.0842274846355!3d37.42281987982592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fbcf7db0cf3cf%3A0xe5b61040f55ae362!2sGolden%20Gate%20Bridge!5e0!3m2!1sen!2sus!4v1636350129303!5m2!1sen!2sus" width="450" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+                        
+                    </form>
+                </div>
+               
+            </td>
+        </tr>
+    </table>
+        <!-- Leave a Message Table -->
+    <table class="leave-message-table">
+        <tr>
+            <td>
+                <!-- Leave a Message Form Section -->
+                <div class="leave-message-form">
+                    <form>
+                        <h2>Leave a Message</h2>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Email:</label>
+                      <input type="email" id="emailForm" name="email" required>
+
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+
+                       
+                    </form>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+ <!-- Submit Button Section -->
+<button class="Submit-button"><span>Submit</span></button>
+
+<footer>
+    <p>&copy; 2023 Laura Tomac. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

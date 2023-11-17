@@ -1,19 +1,19 @@
-/* Main Stylesheet */
+/* Global Styles */
 body {
     background-image: url(../images/background-image.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
   }
-
+ /* Shopping Cart Icon */
   .fas.fa-shopping-cart {
     font-size: 24px;
     position: absolute;
     top: 50px;
     right: 120px;
 }
-
-
-.logo {
+/* Logo Styles */
+  .logo {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -21,11 +21,11 @@ body {
 }
 
 .logo img {
-    width: 100px; 
-    height: auto;
+    width: 85px; 
+    height: auto; 
 }
 
-/* Hamburger menu  */
+/* Hamburger Menu Styles */
 #menuToggle {
     display: block;
     position: relative;
@@ -119,50 +119,63 @@ body {
     transform: none;
 }
 
-  .container {
-    text-align: center;
-    font-size: 25px;
-    padding: 70px;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  .text-box {
-    text-align:start;
-    background-color: rgb(251, 215, 236);
-    padding: 30px;
-    max-width: 80%;
-    margin: 0 auto;
-    
-  }
-
-
-  #images {
-    display: flex;
-    justify-content: center;
-}
-
-.image-container {
+/* Main Content Container Styles */
+.tables-container {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 50px;
+}
+/* Styles for Contact and Leave Message Tables */
+.contact-table,
+.leave-message-table {
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 50px;
+    background-color: #fff;
+}
+/* Label and Input/Textarea Styles */
+label {
+    display: block;
+    margin-bottom: 8px;
 }
 
-.image-item {
-    display: inline-block;
-    margin: 60px 0; 
-    margin-left: 30px;
- 
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+/* Styles for Leave Message Table */
+.leave-message-table td {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
 }
 
-.image-item img {
-    max-width: 80%;
-    height: auto;
-   
+.leave-message-form {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    background-color: #fff;
+}
+/* Heading Styles */
+h2 {
+    text-align: center;
 }
 
-/* Button Styles */
- .Products-button {
+/* Submit Button Styles */
+.Submit-button{
     background-color: #ffd6f2; 
     color: #545454;; 
     padding: 10px 20px; 
@@ -170,63 +183,32 @@ body {
     float: right;
     top: 900px;  
     right: 70px;
-    transition: background-color 0.3s ease;
-    cursor: pointer;
+    
   
 }
-/* Button Styles adding bounce animation*/
-.Products-button:hover {
+
+.Submit-button:hover {
     background-color: #ffd6f25e;
-     animation: bounce 1s infinite
 } 
-
-
-
-  @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-      transform: translateY(0);
+/* Responsive Styles for Small Screens */
+@media screen and (max-width: 1161px) {
+    .tables-container {
+        display: grid;
+        flex-direction: column;
+        align-items: stretch;
     }
-    40% {
-      transform: translateY(-30px);
-    }
-    60% {
-      transform: translateY(-20px);
-    }
-  }
 
-/* Media Queries for Responsive Design */
-
-@media screen and (max-width: 233px) {
-    .container {
+    .contact-table,
+    .leave-message-table {
         max-width: 100%;
-        padding: 10px;
+        margin: 20px;
     }
 
-    .product-container {
-        width: 100%;
-        padding: 20px;
-    }
-
-    .button {
-        top: unset;
-        bottom: 20px;
-        right: 20px;
-    }
-}
-
-@media screen and (min-width: 233px) and (max-width: 1161px) {
-    .container {
-        max-width: 80%;
-        padding: 10px;
-    }
-
-    .product-container {
-        width: 70%;
-        padding: 50px;
-    }
-
-    .button {
-        top: 900px;
-        right: 70px;
+    .Submit-button {
+        position: static;
+        float: none;
+        margin-top: 20px;
+        margin-right: auto;
+        margin-left: auto;
     }
 }

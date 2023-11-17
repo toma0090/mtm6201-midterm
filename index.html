@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE-edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- Link to external CSS file and Font Awesome --> 
+   <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   
 
@@ -12,45 +13,86 @@
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="images/logo.png" alt="Logo">
-        </div>
+        <!-- Logo Section -->
+       <div class="logo">
+    <picture>
+        <!-- Logo Section optimized -->
+        <source media="(max-width:500px)" srcset="images/logo-180_x_180.png">
+        <source media="(min-width:501px)" srcset="images/logo-320_x_320.png">
+        <img src="images/logo-320_x_320.png" alt="logo">
+    </picture>
+</div>
+
         <div id="menuToggle">
             <input type="checkbox" />
             <span></span>
             <span></span>
             <span></span>
+             <!-- Hamburger Menu Links -->
             <ul id="menu">
-                <a href="home.html"><li>Home</li></a>
-                <a href="Products.html"><li>Products</li></a>
-                <a href="Order.html"><li>Order</li></a>
-                <a href="contact.html"><li>Contact</li></a>
-            
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </header>
-
+           <!-- Shopping Cart Icon -->
     <i class="fas fa-shopping-cart"></i>
-
+       <!-- Header Container -->
     <div class="container">
         <h1>Maybe Your Miracle Is Hidden In A Cake</h1>
     </div>
+    
     <div class="text-box">
         <p>La'chère Bakery of Miracles invites you on an unforgettable journey through the magical world of sweets and cakes.</p> 
 
         <p>Our cakes are not only desserts but also a way to express your imagination and emotional bonds. Our wide and unique menu, which appeals to people from all walks of life, combines flavor, aesthetics, and creativity to add a special touch to every moment.</p>
     </div>
-
-    <div class="image-container">
-        <img src="images/Strawberry-Cupcakesjpg.jpg" alt="starwberry cupcake">
-        <img src="images/babybirhtday.jpg" alt="baby birhtday">
-        <img src="images/cake.jpg" alt="birhtday cake">
-        <img src="images/cookie.jpg" alt="cookies">
+    <!-- Image Section every images optimized -->
+    <section id="images">
+        <div class="image-container">
+    <div class="image-item">
+        <picture>
+            <source media="(max-width:500px)" srcset="images/babybirhtday-180_x_180.jpg">
+            <source media="(min-width:501px)" srcset="images/babybirhtday-320_x_320.jpg">
+            <img src="images/babybirhtday-320_x_320.jpg" alt="Baby Birthday">
+        </picture>
     </div>
 
-    <button class="Products-button"><a href="Products.html">Products</a></button>
+    <div class="image-item">
+        <picture>
+            <source media="(max-width:500px)" srcset="images/Cake-Mix-Cookies1-1-180_x_180.jpeg">
+            <source media="(min-width:501px)" srcset="images/Cake-Mix-Cookies1-1-320_x_320.jpeg">
+            <img src="images/Cake-Mix-Cookies1-1-320_x_320.jpeg" alt="Cake Mix Cookies">
+        </picture>
+    </div>
+
+    <div class="image-item">
+        <picture>
+            <source media="(max-width:500px)" srcset="images/Strawberry-Cupcakesjpg-180_x_180.jpg">
+            <source media="(min-width:501px)" srcset="images/Strawberry-Cupcakesjpg-320_x_320.jpg">
+            <img src="images/Strawberry-Cupcakesjpg-320_x_320.jpg" alt="Strawberry Cupcakes">
+        </picture>
+    </div>
+
+    <div class="image-item">
+        <picture>
+            <source media="(max-width:500px)" srcset="images/cake-180_x_180.jpg">
+            <source media="(min-width:501px)" srcset="images/cake-320_x_320.jpg">
+            <img src="images/cake-320_x_320.jpg" alt="Cake">
+        </picture>
+    </div>
+</div>
+</section>
+
+    
+      <!-- Products Button When You Click the Button You are Going to Products Page -->
+     <a href="Products.html" class="Products-button">Products</a>
 
 
-
+     <footer>
+        <p>&copy; 2023 Laura Tomac. All rights reserved.</p>
+    </footer>
+    
 </body>
 </html>

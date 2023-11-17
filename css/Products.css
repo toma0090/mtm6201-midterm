@@ -2,6 +2,327 @@ body {
     background-image: url(../images/background-image.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    
+}
+/* Shopping Cart Icon Styles */
+.fas.fa-shopping-cart {
+    font-size: 24px;
+    position: absolute;
+    top: 50px;
+    right: 120px;
+}
+/* Logo Styles */
+.logo {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 50px;
+}
 
-  }
+.logo img {
+    width: 100px; 
+    height: auto;
+}
+/* Hambuger menu  Styles */
+#menuToggle {
+    display: block;
+    position: relative;
+    top: 50px;
+    left: 50px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#menuToggle a {
+    text-decoration: none;
+    color: #232323;
+    transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+    color: rgb(245, 21, 242);
+}
+/* Menu Toggle Input Styles */
+#menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+    -webkit-touch-callout: none;
+}
+/* Menu Toggle Span Styles */
+#menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #cdcdcd;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
+}
+/* Menu Toggle Childs Styles */
+#menuToggle span:first-child {
+    transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+}
+/* Menu Styles */
+#menu {
+    position: absolute;
+    width: 30%; 
+    height: 100vh; 
+    margin: -60px;
+    padding: 50px;
+    padding-top: 125px;
+    background: #ededed;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menu li {
+    padding: 10px 0;
+    font-size: 22px;
+}
+
+#menuToggle input:checked ~ ul {
+    transform: none;
+}
+/* Container Styles */
+.container {
+    text-align: center;
+    font-size: 25px;
+    padding: 10px;
+    box-sizing: border-box;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: rgba(255, 226, 252, 0.553);
+}
+
+.container h1 {
+    margin-bottom: 10px;
+}
+/* Product Container Styles */
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 70px;
+    border: 1px solid rgb(255, 254, 255);
+    gap: 10px;
+    width: 70%;
+    max-height: 60vh;
+    overflow-y: scroll;
+}
+
+.product-item {
+    text-align: center;
+    flex-grow: 1;
+    border: 1px solid rgb(255, 255, 255);
+    max-width: 30%;
+}
+
+.product-item img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+/* Product Name Styles */
+.product-name {
+    margin-top: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+/* Button Styles */
+.button {
+    background-color: #ffd6f2;
+    color: #545454;
+    padding: 10px 20px;
+    border: 2px solid #f392c3;
+    position: absolute;
+    top: 900px;
+    right: 70px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+/* Button Hover Styles */
+.button:hover {
+    background-color: #ffd6f25e;
+    animation: shakeButton 0.5s infinite ease-in-out;
+}
+/* Shake Animation Keyframes */
+@keyframes shakeButton {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    75% {
+        transform: translateX(-5px);
+    }
+}
+/* Gallery Styles */
+.gallery {
+    display: flex;
+    width: 100%;
+    border: 1px solid #ffffff;
+    flex-direction: row-reverse;
+}
+/* Filter Styles */
+.filter {
+    width: 40%;
+    border: 1px solid #232323;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid rgb(77, 77, 77);
+    margin-top: 50px;
+}
+/* Filter Selection Styles */
+.filter-selection {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid black;
+    height: 30%;
+    width: 100%;
+}
+
+.filter-title {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    top: 0;
+    left: 0;
+    margin: 0 0;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+}
+
+.filter-title h1 {
+    border: 1px solid #232323;
+    background-color: #fdd4fc;
+    padding: 0 5px;
+}
+/* Form Styles */
+form {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+    padding: 10px;
+}
+
+/* Scrollbar Styles */
+/* For WebKit (Safari, Chrome) */
+::-webkit-scrollbar {
+    width: 12px; /* Adjust the width as needed */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+}
+
+/* For Firefox */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #888 transparent;
+}
+
+/* For Microsoft Edge */
+* {
+    -ms-overflow-style: scrollbar;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Media Queries for Responsive Design */
+
+@media screen and (max-width: 233px) {
+    .container {
+        max-width: 80%;
+    }
+
+    .product-container {
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .button {
+        top: unset;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .gallery {
+        flex-direction: column-reverse;
+    }
+
+    .filter {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+@media screen and (min-width: 233px) and (max-width: 1161px) {
+    .logo img {
+        width: 60px;
+    }
+
+    .container {
+        max-width: 60%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .product-container {
+        width: 80%;
+        padding: 30px;
+        box-sizing: border-box;
+    }
+
+    .button {
+        top: 700px;
+        right: 70px;
+    }
+}

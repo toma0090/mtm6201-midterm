@@ -4,13 +4,158 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <head>
-        <!-- Diğer meta etiketleri ve bağlantılar -->
-        <link rel="stylesheet" type="text/css" href="css/Products.css">
-    </head>
+    <!-- Link to external CSS file and Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="css/Products.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
     <title>Document</title>
 </head>
 <body>
-    <h1>Products</h1>
+    
+    <header>
+        
+<!-- Logo Section -->
+        <div class="logo">
+              <!-- Logo Section optimized -->
+            <picture>
+                <source media="(max-width:500px)"srcset="images/logo-180_x_180.png ">
+                <source media="(min-width:501px)"srcset="images/logo-320_x_320.png">
+                <img src="images/logo-320_x_320.png" alt="logo">
+            </picture>
+    
+        </div>
+     <!-- Hamburger menu links -->
+        <div id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="menu">
+                <a href="index.html"><li>Home</li></a>
+                <a href="Products.html"><li>Products</li></a>
+                <a href="contact.html"><li>Contact</li></a>
+            
+            </ul>
+        </div>
+    </header>
+       <!-- Shopping Cart Icon -->
+    <i class="fas fa-shopping-cart"></i>
+
+    <div class="container">
+        <h1>Products</h1>
+    </div>
+     <!-- Boxes Filters -->
+    <div class="gallery">
+        <div class="filter">
+          <form action="form">
+            <div class="filter-selection">
+              <div class="filter-title">
+                <h1>Desserts</h1>
+              </div>
+              <label class="checkbox-item">
+                <input type="checkbox" name="Dessert" value="Cake" /> Cake
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="Dessert" value="Cookies" /> Cookie
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="Dessert" value="Cupcake" /> Cupcake
+              </label>
+            </div>
+            <div class="filter-selection">
+              <div class="filter-title">
+                <h1>Flavors</h1>
+              </div>
+              <label class="checkbox-item">
+                <input type="checkbox" name="flavor" value="Chocolate" /> Apple
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="flavor" value="Vanilla" /> Banana
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="flavor" value="Fruit" /> Orange
+              </label>
+            </div>
+            <div class="filter-selection">
+              <div class="filter-title">
+                <h1>Boxs</h1>
+              </div>
+              <label class="checkbox-item">
+                <input type="checkbox" name="Boxes" value="Cupcake-boxes" /> Cupcake Boxs
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="Boxes" value="Cookie-boxs" /> Cookie Boxs
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="Boxes" value="mix-boxs" /> Mix Boxs
+              </label>
+            </div>
+          </form>
+        </div>
+  
+ <!-- Product Container - optimized images-->
+    <div class="product-container">
+        <div class="product-item">
+            <picture>
+                <source media="(max-width:500px)"srcset="img/ Cookies-box-180_x_180.jpg ">
+                <source media="(min-width:501px)"srcset="img/ Cookies-box-320_x_320.jpg ">
+                <img src="img/ Cookies-box-320_x_320.jpg" alt="">
+            </picture>
+            <div class="product-name">Cookies Boxs</div>
+        </div>
+
+        <div class="product-item">
+            <picture>
+                <source media="(max-width:500px)"srcset="img/Mix-box180_x_180.jpg ">
+                <source media="(min-width:501px)"srcset="img/Mix-box-320_x_320.jpg ">
+                <img src="img/Mix-box-320_x_320.jpg" alt="">
+            </picture>
+          
+            <div class="product-name">Mix Boxs</div>
+        </div>
+        <div class="product-item">
+            <picture>
+                <source media="(max-width:500px)"srcset="img/Cupcake-box-180_x_180.jpg">
+                <source media="(min-width:501px)"srcset="img/Cupcake-box-320_x_320.jpg">
+                <img src="img/Cupcake-box-320_x_320.jpg" alt="">
+            </picture>
+            <div class="product-name">Cupcake Boxs</div>
+        </div>
+        <div class="product-item">
+            <picture>
+                <source media="(max-width:500px)"srcset="img/cupcake180_x_180.png ">
+                <source media="(min-width:501px)"srcset="img/cupcake320_x_320.png">
+                <img src="img/cupcake320_x_320.png" alt="">
+            </picture>
+            <div class="product-name">Cupcake</div>
+        </div>
+
+        <div class="product-item">
+            <picture>
+                <source media="(max-width:500px)"srcset="img/cake180_x_180.png ">
+                <source media="(min-width:501px)"srcset="img/cake320_x_320.png ">
+                <img src="img/cake320_x_320.png" alt="">
+            </picture>
+          
+            <div class="product-name">Cake</div>
+        </div>
+        <div class="product-item">
+            <picture>
+                <source media="(max-width:500px)"srcset="img/cookies.180_x_180.png ">
+                <source media="(min-width:501px)"srcset="img/cookies.-320_x_320.png ">
+                <img src="img/cookies.-320_x_320.png" alt="">
+            </picture>
+            <div class="product-name">Cookies</div>
+        </div>
+    </div>
+   
+ </div>
+     <!-- Order Button -->
+    <button class="button"><a href="Products.html">Order</a></button>
+
+    <footer>
+        <p>&copy; 2023 Laura Tomac. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
